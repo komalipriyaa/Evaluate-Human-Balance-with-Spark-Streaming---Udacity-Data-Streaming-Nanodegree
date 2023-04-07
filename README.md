@@ -2,10 +2,14 @@
 
 Project Overview
 You work for the data science team at STEDI, a small startup focused on assessing balance for seniors. STEDI has an application that collects data from seniors during a small exercise. The user logs in and then selects the customer they are working with. Then the user starts a timer and clicks a button with each step the senior takes. When the senior has reached 30 steps, their test is finished. The data transmitted enables the application to monitor seniors’ balance risk.
+![image](https://user-images.githubusercontent.com/49073720/230547098-148aaf8b-bb56-463a-b5ad-316b30393a64.png)
 
 STEDI Application
 A New Product Feature
 Your product manager has requested a graph that shows fall risk (will they fall and become injured?) for recent assessments. The development team has built a graph, which is ready to receive risk information from Kafka:
+
+![image](https://user-images.githubusercontent.com/49073720/230547163-28d3b7a5-07eb-4d16-88dd-d4880680caba.png)
+
 
 The STEDI data science team has configured some real-time data sources using Kafka Connect. One of those data sources is Redis. When a customer is first assessed in the STEDI application, their record is added to a sorted set called Customer in Redis. Redis is configured as a Kafka source and whenever any data is saved to Redis (including Customer information), a payload is published to the Kafka topic called redis-server.
 The Challenge
